@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Stock_Market"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_stock__market"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Stock_Page"
+            android:label="@string/title_activity_stock__page"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

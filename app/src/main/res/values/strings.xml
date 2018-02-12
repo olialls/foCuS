@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Focus</string>
+
+    <string name="title_activity_stock__market">Stock_Market</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_stock__page">Stock_Page</string>
 </resources>
