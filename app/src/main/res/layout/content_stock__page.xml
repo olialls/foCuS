@@ -8,6 +8,32 @@
     tools:context="com.example.group5.focus.MainActivity">
 
 
+    <TextView
+        android:id="@+id/StockName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:textSize="70sp"
+        android:text="Stock" />
 
+    <TextView
+        android:id="@+id/StockPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/StockName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:textSize="70sp"
+        android:text="Latest Price" />
 
+    <Button
+        android:id="@+id/RequestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/StockPrice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:text="Get Information" />
 </RelativeLayout>
