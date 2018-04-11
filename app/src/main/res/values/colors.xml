@@ -8,4 +8,10 @@
     <color name="colorTextHint">#194f73</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="primaryDark">#292b3d</color>
+    <color name="graylight">#fafafa</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
+
 </resources>

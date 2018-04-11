@@ -10,20 +10,21 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.group5.focus.R;
-import com.example.group5.focus.adapters.UsersRecyclerAdapter;
+import com.example.group5.focus.adapters.ClientRecyclerAdapter;
+import com.example.group5.focus.model.Client;
 import com.example.group5.focus.model.User;
 import com.example.group5.focus.sql.DatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsersListActivity extends AppCompatActivity {
+public class ClientsListActivity extends AppCompatActivity {
 
-    private AppCompatActivity activity = UsersListActivity.this;
+    private AppCompatActivity activity = ClientsListActivity.this;
     private AppCompatTextView textViewName;
     private RecyclerView recyclerViewUsers;
-    private List<User> listUsers;
-    private UsersRecyclerAdapter usersRecyclerAdapter;
+    private List<Client> listUsers;
+    private ClientRecyclerAdapter clientRecyclerAdapter;
     private DatabaseHelper databaseHelper;
 
     @Override
@@ -48,31 +49,34 @@ public class UsersListActivity extends AppCompatActivity {
      */
     private void initObjects() {
         listUsers = new ArrayList<>();
-        usersRecyclerAdapter = new UsersRecyclerAdapter(listUsers);
+        clientRecyclerAdapter = new ClientRecyclerAdapter(listUsers);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerViewUsers.setLayoutManager(mLayoutManager);
         recyclerViewUsers.setItemAnimator(new DefaultItemAnimator());
         recyclerViewUsers.setHasFixedSize(true);
-        recyclerViewUsers.setAdapter(usersRecyclerAdapter);
+        recyclerViewUsers.setAdapter(clientRecyclerAdapter);
         databaseHelper = new DatabaseHelper(activity);
 
         String nameFromIntent = getIntent().getStringExtra("USERNAME");
         textViewName.setText(nameFromIntent);
 
-        getDataFromSQLite();
+        List<User> User = databaseHelper.getCurrentUser(nameFromIntent);
+        String id = Integer.toString(User.get(0).getId());
+        getDataFromSQLite(id);
     }
 
     /**
      * This method is to fetch all user records from SQLite
      */
-    private void getDataFromSQLite() {
+    private void getDataFromSQLite(final String id) {
         // AsyncTask is used that SQLite operation not blocks the UI Thread.
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 listUsers.clear();
-                listUsers.addAll(databaseHelper.getAllUser());
+
+                listUsers.addAll(databaseHelper.findClients(id));
 
                 return null;
             }
@@ -80,8 +84,9 @@ public class UsersListActivity extends AppCompatActivity {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                usersRecyclerAdapter.notifyDataSetChanged();
+                clientRecyclerAdapter.notifyDataSetChanged();
             }
         }.execute();
     }
+
 }
