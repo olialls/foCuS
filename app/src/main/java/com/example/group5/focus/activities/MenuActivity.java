@@ -74,21 +74,21 @@ public class MenuActivity extends AppCompatActivity {
                     }
                     else if (finalI == 1) {
 
-                        Intent accountsIntent = new Intent(MenuActivity.this, ClientsListActivity.class);
-                        accountsIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
-                        startActivity(accountsIntent);
+                        Intent clientsIntent = new Intent(MenuActivity.this, ClientsListActivity.class);
+                        clientsIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
+                        startActivity(clientsIntent);
                     }
                     else if (finalI == 2) {
 
-                        Intent accountsIntent = new Intent(MenuActivity.this, ProfileActivity.class);
-                        accountsIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
-                        startActivity(accountsIntent);
+                        Intent stockIntent = new Intent(MenuActivity.this, StockActivity.class);
+                        stockIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
+                        startActivity(stockIntent);
                     }
                     else if (finalI == 3) {
 
-                        Intent accountsIntent = new Intent(MenuActivity.this, UsersListActivity.class);
-                        accountsIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
-                        startActivity(accountsIntent);
+                        Intent CalendarIntent = new Intent(MenuActivity.this, UsersListActivity.class);
+                        CalendarIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
+                        startActivity(CalendarIntent);
                     }
                     else if (finalI == 4) {
 

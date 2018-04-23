@@ -4,6 +4,7 @@ package com.example.group5.focus.sql;
  * Created by small on 19/03/2018.
  */
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -89,6 +90,27 @@ public class DatabaseHelper extends SQLiteAssetHelper {
 //        db.insert(TABLE_USER, null, values);
 //        db.close();
 //    }
+     /**
+     * This method is to create user record
+     *
+     * @param client
+     */
+    public void addClient(Client client) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_CLIENT_NAME, client.getName());
+        values.put(COLUMN_CLIENT_DOB, client.getDOB());
+        values.put(COLUMN_CLIENT_CURRENCY, client.getCurrency());
+        values.put(COLUMN_CLIENT_COUNTRY, client.getCountry());
+        values.put(COLUMN_CLIENT_WEALTH, client.getWealth());
+        values.put(COLUMN_CLIENT_COMPANY, client.getCompany());
+        values.put(COLUMN_CLIENT_MANAGER, client.getManager());
+
+        // Inserting Row
+        db.insert(TABLE_CLIENT, null, values);
+        db.close();
+    }
 
     /**
      * This method is to fetch all user and return the list of user records

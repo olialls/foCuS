@@ -74,9 +74,9 @@ public class ClientRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHold
             public void onClick(View view, int position) {
                 row_index = position;
                 Common.currentItem = listUsers.get(position);
-                notifyDataSetChanged();
                 int id = listUsers.get(position).getManager();
                 String managerID = Integer.toString(id);
+                notifyDataSetChanged();
                 Intent profileIntent = new Intent(view.getContext(), ProfileActivity.class);
                 profileIntent.putExtra("POSITION", row_index);
                 profileIntent.putExtra("ID", managerID);
