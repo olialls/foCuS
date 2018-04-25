@@ -11,6 +11,7 @@ import android.widget.GridLayout;
 import android.widget.Toast;
 
 import com.example.group5.focus.R;
+import com.example.group5.focus.sample.MainActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -86,21 +87,19 @@ public class MenuActivity extends AppCompatActivity {
                     }
                     else if (finalI == 3) {
 
-                        Intent CalendarIntent = new Intent(MenuActivity.this, UsersListActivity.class);
+                        Intent CalendarIntent = new Intent(MenuActivity.this, MainActivity.class);
                         CalendarIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
                         startActivity(CalendarIntent);
                     }
                     else if (finalI == 4) {
 
-                        Intent accountsIntent = new Intent(MenuActivity.this, UsersListActivity.class);
-                        accountsIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
-                        startActivity(accountsIntent);
+                        Intent RSSIntent = new Intent(MenuActivity.this, RSSActivity.class);
+                        startActivity(RSSIntent);
                     }
                     else if (finalI == 5) {
 
-                        Intent accountsIntent = new Intent(MenuActivity.this, UsersListActivity.class);
-                        accountsIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
-                        startActivity(accountsIntent);
+                        Intent MapsIntent = new Intent(MenuActivity.this, MapsActivity.class);
+                        startActivity(MapsIntent);
                     }
 
                 }
