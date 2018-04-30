@@ -5,13 +5,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/focus_logo_light"
+            android:layout_marginTop="-25dp"/>
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
     <android.support.v7.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="5dp"
-        android:paddingLeft="4dp"
+
         android:paddingTop="5dp"
-        android:text="My Stocks"
+        android:text="Your Stocks"
+        android:layout_gravity="center"
         android:textStyle="bold"
         android:textColor="@android:color/black" />
 
@@ -21,13 +40,13 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerViewUsers"
+            android:id="@+id/recyclerViewStocks"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
+            android:id="@+id/fab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"

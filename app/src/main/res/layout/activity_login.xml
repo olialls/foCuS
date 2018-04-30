@@ -157,14 +157,14 @@ tools:context="com.example.group5.focus.activities.LoginActivity">
         android:text="@string/text_login"
         style="@style/AppTheme.RoundedCornerMaterialButton"/>
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/textViewLinkRegister"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:text="@string/text_not_member"
-        android:textSize="16dp" />
+    <!--<android.support.v7.widget.AppCompatTextView-->
+        <!--android:id="@+id/textViewLinkRegister"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/text_not_member"-->
+        <!--android:textSize="16dp" />-->
 </android.support.v7.widget.LinearLayoutCompat>
 </android.support.v4.widget.NestedScrollView>
 

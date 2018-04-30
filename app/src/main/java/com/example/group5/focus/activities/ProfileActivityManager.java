@@ -27,9 +27,9 @@ public class ProfileActivityManager extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-        initViews();
-        initObjects();
+        setContentView(R.layout.activity_profile_manager);
+        //initViews();
+        //initObjects();
 
     }
 

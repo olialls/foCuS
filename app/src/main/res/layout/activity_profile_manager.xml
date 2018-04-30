@@ -29,7 +29,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wiliam Snoe"
+                android:text="Tom Matthews"
                 android:textColor="#fff"
                 android:textStyle="bold"
                 android:textSize="21sp"/>
@@ -48,12 +48,12 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Industry"
+                        android:text="Clients"
                         android:textSize="20sp"
                         />
                     <android.support.v7.widget.AppCompatTextView
@@ -71,12 +71,12 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Company"
+                        android:text="Username"
                         android:textSize="22sp"
                         android:textStyle="bold"
                         />
@@ -84,9 +84,9 @@
                         android:id="@+id/textViewWealth"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1205"
+                        android:text="matthewstom"
                         android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:paddingTop="10dp"
                         android:textColor="@color/startblue"/>
 
@@ -95,7 +95,7 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                         android:id="@+id/textViewCountry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="360"
+                        android:text="UK"
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:paddingTop="10dp"
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="Wiliam@gmail.com"/>
+                android:text="MatthewsTom@gmail.com"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -161,7 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="+44 7369 8932"/>
+                android:text="+44 012 0161"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -180,7 +180,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="Add to group"/>
+                android:text="Add Client"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -199,18 +199,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="Conversation"/>
+                android:text="Client List"/>
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:textColor="#fff"
-        android:background="@drawable/buttonstyle"
-        android:layout_marginTop="35dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact"/>
+    <!--<Button-->
+        <!--android:textColor="#fff"-->
+        <!--android:background="@drawable/buttonstyle"-->
+        <!--android:layout_marginTop="35dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Contact"/>-->
 
 
 

@@ -61,8 +61,6 @@ public class StockActivity extends AppCompatActivity implements View.OnClickList
         appCompatButtonCollect.setOnClickListener(this);
     }
 
-
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -144,12 +142,12 @@ public class StockActivity extends AppCompatActivity implements View.OnClickList
             try {
                 JSONObject jsonObject = new JSONObject(result);
 
-                JSONObject infoArray = jsonObject.getJSONObject("Meta Data");
-                String lastDate = infoArray.getString("3. Last Refreshed");
 
-                JSONObject timeSeries = jsonObject.getJSONObject("Time Series (Daily)");
-                JSONObject resultArray = timeSeries.getJSONObject(lastDate);
-                double price = resultArray.getDouble("4. close");
+                JSONObject infoArray = jsonObject.getJSONObject("Time Series (Daily)");
+                //String lastDate = infoArray.getString("3. Last Refreshed");
+                JSONObject info = infoArray.getJSONObject("2018-04-30");
+//                JSONObject resultArray = info.getJSONObject("2018-04-30");
+                double price = info.getDouble("4. close");
 
                 String resultPrice = Double.toString(price);
                 textViewPrice.setText(resultPrice);

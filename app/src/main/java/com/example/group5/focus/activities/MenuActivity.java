@@ -69,7 +69,7 @@ public class MenuActivity extends AppCompatActivity {
 
                     if (finalI == 0) {
 
-                        Intent accountsIntent = new Intent(MenuActivity.this, UsersListActivity.class);
+                        Intent accountsIntent = new Intent(MenuActivity.this, ProfileActivityManager.class);
                         accountsIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
                         startActivity(accountsIntent);
                     }
@@ -81,7 +81,7 @@ public class MenuActivity extends AppCompatActivity {
                     }
                     else if (finalI == 2) {
 
-                        Intent stockIntent = new Intent(MenuActivity.this, StockActivity.class);
+                        Intent stockIntent = new Intent(MenuActivity.this, StockListActivity.class);
                         stockIntent.putExtra("USERNAME", textViewName.getText().toString().trim());
                         startActivity(stockIntent);
                     }

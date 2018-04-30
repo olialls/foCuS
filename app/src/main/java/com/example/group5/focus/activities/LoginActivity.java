@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         appCompatButtonLogin = (AppCompatButton) findViewById(R.id.appCompatButtonLogin);
 
-        textViewLinkRegister = (AppCompatTextView) findViewById(R.id.textViewLinkRegister);
+//        textViewLinkRegister = (AppCompatTextView) findViewById(R.id.textViewLinkRegister);
 
     }
 
@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      */
     private void initListeners() {
         appCompatButtonLogin.setOnClickListener(this);
-        textViewLinkRegister.setOnClickListener(this);
+//        textViewLinkRegister.setOnClickListener(this);
     }
 
     /**

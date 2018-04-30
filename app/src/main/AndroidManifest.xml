@@ -46,12 +46,16 @@
         <activity
             android:name=".activities.ClientAddActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activities.StockListActivity" />
+        <activity android:name=".activities.StockListActivity"
+            android:theme="@style/AppThemeNoAB"/>
         <activity
             android:name=".activities.RSSActivity"
             android:theme="@style/AppThemeNoAB" />
         <activity
             android:name=".sample.MainActivity"
+            android:theme="@style/AppThemeNoAB"/>
+        <activity
+            android:name=".activities.ProfileActivityManager"
             android:theme="@style/AppThemeNoAB"/>
 
         <!--
