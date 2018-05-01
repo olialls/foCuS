@@ -20,7 +20,7 @@ public class DatabaseHelper extends SQLiteAssetHelper {
 
     private static final int DATABASE_VERSION = 1;
 
-    private static final String DATABASE_NAME = "db.db";
+    private static final String DATABASE_NAME = "dbFinal.db";
 
     // User table name
     private static final String TABLE_USER = "manager";
